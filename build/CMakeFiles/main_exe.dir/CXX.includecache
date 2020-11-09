@@ -1,0 +1,58 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Cell.cpp
+Cell.h
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Cell.h
+
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Cell.h
+cstdlib
+-
+
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Path.cpp
+Path.h
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Path.h
+
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Path.h
+Cell.h
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Cell.h
+
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/main.cpp
+cstdlib
+-
+vibes.h
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/vibes.h
+Path.h
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Path.h
+Cell.h
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/Cell.h
+
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/vibes.cpp
+vibes.h
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/vibes.h
+sstream
+-
+cstdlib
+-
+cstdio
+-
+cassert
+-
+
+/home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/src/vibes.h
+vector
+-
+string
+-
+map
+-
+sstream
+-
+iostream
+-
+
