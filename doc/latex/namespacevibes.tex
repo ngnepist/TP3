@@ -1,0 +1,209 @@
+\hypertarget{namespacevibes}{}\section{vibes Namespace Reference}
+\label{namespacevibes}\index{vibes@{vibes}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classvibes_1_1_params}{Params}
+\item 
+class \hyperlink{classvibes_1_1_value}{Value}
+\item 
+struct \hyperlink{structvibes_1_1_vec}{Vec}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{Indent}\textbf{ Useful types for colors, vectors and points}\par
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structvibes_1_1_vec}{Vec}$<$ int, 3 $>$ \hyperlink{group__params_gaaacd30b512a79f94ed7ca73276ecd6f9}{R\+GB}
+\begin{DoxyCompactList}\small\item\em A R\+GB triplet \mbox{[}0..255\mbox{]}. \end{DoxyCompactList}\item 
+typedef \hyperlink{structvibes_1_1_vec}{Vec}$<$ int, 4 $>$ \hyperlink{group__params_gaf49197546b6ee693cc82733217f205ba}{R\+G\+BA}
+\begin{DoxyCompactList}\small\item\em A R\+G\+BA triplet \mbox{[}0..255\mbox{]}. \end{DoxyCompactList}\item 
+typedef \hyperlink{structvibes_1_1_vec}{Vec}$<$ double, 2 $>$ \hyperlink{group__params_gaf3161ff170c192763988ec53f8f6ee5f}{Vec2d}
+\begin{DoxyCompactList}\small\item\em A 2D floating point vector. \end{DoxyCompactList}\item 
+typedef \hyperlink{structvibes_1_1_vec}{Vec}$<$ double, 3 $>$ \hyperlink{group__params_gadb53848603b272f3dba56c538387a624}{Vec3d}
+\begin{DoxyCompactList}\small\item\em A 3D floating point vector. \end{DoxyCompactList}\item 
+typedef \hyperlink{structvibes_1_1_vec}{Vec}$<$ double, 4 $>$ \hyperlink{group__params_gaa6359a0627a612d93c3d007436b7d505}{Vec4d}
+\begin{DoxyCompactList}\small\item\em A 4D floating point vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__connection_ga8aabd902b41bbb5b865a3ba8be7ece76}{begin\+Drawing} ()
+\begin{DoxyCompactList}\small\item\em Start V\+I\+Bes in connected mode\+: connects to the V\+I\+Bes viewer. \end{DoxyCompactList}\item 
+void \hyperlink{group__connection_ga325194ea4b5f166c8e1dd975b5371e48}{begin\+Drawing} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Start V\+I\+Bes in file saving mode. All commands are saved to the specified file. \end{DoxyCompactList}\item 
+void \hyperlink{group__connection_gacb8b0b5096e8457c761f228a017b1f6b}{end\+Drawing} ()
+\begin{DoxyCompactList}\small\item\em Close connection to the viewer or the drawing file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacevibes_a78a5e45d9c9b8fe7f64a72b1a8c1321d}\label{namespacevibes_a78a5e45d9c9b8fe7f64a72b1a8c1321d}} 
+void {\bfseries draw\+Box} (const double \&x\+\_\+lb, const double \&x\+\_\+ub, const double \&y\+\_\+lb, const double \&y\+\_\+ub, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_adf6e6c5774887eeb5cf85cdf910f4cad}\label{namespacevibes_adf6e6c5774887eeb5cf85cdf910f4cad}} 
+void {\bfseries draw\+Box} (const vector$<$ double $>$ \&bounds, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_ac59608fdfcb9a26430ab1df8dfbb1264}\label{namespacevibes_ac59608fdfcb9a26430ab1df8dfbb1264}} 
+void {\bfseries draw\+Ellipse} (const double \&cx, const double \&cy, const double \&a, const double \&b, const double \&rot, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a56d8467fc1fac1858fdafab11559bd81}\label{namespacevibes_a56d8467fc1fac1858fdafab11559bd81}} 
+void {\bfseries draw\+Confidence\+Ellipse} (const double \&cx, const double \&cy, const double \&sxx, const double \&sxy, const double \&syy, const double \&K, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_ad9e22b49412723fb3c464305353c5541}\label{namespacevibes_ad9e22b49412723fb3c464305353c5541}} 
+void {\bfseries draw\+Confidence\+Ellipse} (const vector$<$ double $>$ \&center, const vector$<$ double $>$ \&cov, const double \&K, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a66f1ec79b615d8a7f12a56ef2c619217}\label{namespacevibes_a66f1ec79b615d8a7f12a56ef2c619217}} 
+void {\bfseries draw\+Sector} (const double \&cx, const double \&cy, const double \&a, const double \&b, const double \&start\+Angle, const double \&end\+Angle, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a7360f9ac01a9c3099762b752cc199981}\label{namespacevibes_a7360f9ac01a9c3099762b752cc199981}} 
+void {\bfseries draw\+Pie} (const double \&cx, const double \&cy, const double \&r\+\_\+min, const double \&r\+\_\+max, const double \&theta\+\_\+min, const double \&theta\+\_\+max, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_ae0b38b24b59f7018bbf5f26f4fe7da39}\label{namespacevibes_ae0b38b24b59f7018bbf5f26f4fe7da39}} 
+void {\bfseries draw\+Point} (const double \&cx, const double \&cy, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_aa17bc51c8c54f7c4e491c8fc96612cbb}\label{namespacevibes_aa17bc51c8c54f7c4e491c8fc96612cbb}} 
+void {\bfseries draw\+Point} (const double \&cx, const double \&cy, const double \&radius, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a9f85938523a858f2519ec056ef91609a}\label{namespacevibes_a9f85938523a858f2519ec056ef91609a}} 
+void {\bfseries draw\+Ring} (const double \&cx, const double \&cy, const double \&r\+\_\+min, const double \&r\+\_\+max, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a62f813c2a8914f3bd0c63b019ab9a96f}\label{namespacevibes_a62f813c2a8914f3bd0c63b019ab9a96f}} 
+void {\bfseries draw\+Boxes} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&bounds, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a90c2a46cd1f564a390ed2a3b1f095117}\label{namespacevibes_a90c2a46cd1f564a390ed2a3b1f095117}} 
+void {\bfseries draw\+Boxes\+Union} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&bounds, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a1244d0b0da6213530f42134f65bf9d23}\label{namespacevibes_a1244d0b0da6213530f42134f65bf9d23}} 
+void {\bfseries draw\+Line} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&points, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a6487ec00eafeb2f33cebe28be6c8660f}\label{namespacevibes_a6487ec00eafeb2f33cebe28be6c8660f}} 
+void {\bfseries draw\+Line} (const std\+::vector$<$ double $>$ \&x, const std\+::vector$<$ double $>$ \&y, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_aee9a745d10c6a2afa19f1d2d8cdf67d6}\label{namespacevibes_aee9a745d10c6a2afa19f1d2d8cdf67d6}} 
+void {\bfseries draw\+Points} (const std\+::vector$<$ double $>$ \&x, const std\+::vector$<$ double $>$ \&y, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_ac97ced803ebe4ba273271c18488054a7}\label{namespacevibes_ac97ced803ebe4ba273271c18488054a7}} 
+void {\bfseries draw\+Arrow} (const double \&xA, const double \&yA, const double \&xB, const double \&yB, const double \&tip\+\_\+length, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a69097a3c9eb2e178666ad55ee82b42da}\label{namespacevibes_a69097a3c9eb2e178666ad55ee82b42da}} 
+void {\bfseries draw\+Arrow} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&points, const double \&tip\+\_\+length, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a9f82b69896e5c3aedd36b04a4b16f365}\label{namespacevibes_a9f82b69896e5c3aedd36b04a4b16f365}} 
+void {\bfseries draw\+Arrow} (const std\+::vector$<$ double $>$ \&x, const std\+::vector$<$ double $>$ \&y, const double \&tip\+\_\+length, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a0935e6fc500d90394f3b1608faf7b655}\label{namespacevibes_a0935e6fc500d90394f3b1608faf7b655}} 
+void {\bfseries draw\+Polygon} (const std\+::vector$<$ double $>$ \&x, const std\+::vector$<$ double $>$ \&y, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a534947550c6d4dde3b1d16498cd3e7fd}\label{namespacevibes_a534947550c6d4dde3b1d16498cd3e7fd}} 
+void {\bfseries draw\+Vehicle} (const double \&cx, const double \&cy, const double \&rot, const double \&length, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_ade40d1d76522a353ddc783104d9d26cb}\label{namespacevibes_ade40d1d76522a353ddc783104d9d26cb}} 
+void {\bfseries draw\+A\+UV} (const double \&cx, const double \&cy, const double \&rot, const double \&length, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a4a6e7fa6e33f83659bb2ff459902066f}\label{namespacevibes_a4a6e7fa6e33f83659bb2ff459902066f}} 
+void {\bfseries draw\+Tank} (const double \&cx, const double \&cy, const double \&rot, const double \&length, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_aa1c1d1250c16d201c745e66efc4baa4c}\label{namespacevibes_aa1c1d1250c16d201c745e66efc4baa4c}} 
+void {\bfseries draw\+Raster} (const std\+::string \&raster\+Filename, const double \&xlb, const double \&yub, const double \&xres, const double \&yres, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_a844aa7079b495a4ac028495bdd76ffdf}\label{namespacevibes_a844aa7079b495a4ac028495bdd76ffdf}} 
+void {\bfseries new\+Group} (const std\+::string \&name, \hyperlink{classvibes_1_1_params}{Params} params)
+\item 
+\mbox{\Hypertarget{namespacevibes_aca8f238d2d446d1663e63577dc584a2b}\label{namespacevibes_aca8f238d2d446d1663e63577dc584a2b}} 
+void {\bfseries draw\+Circle} (const double \&cx, const double \&cy, const double \&r, \hyperlink{classvibes_1_1_params}{Params} params)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Figure management}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__figure_ga70a27a814768ac217e8323cb887f29a4}{new\+Figure} (const std\+::string \&figure\+Name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Create a new figure named {\itshape figure\+Name}. \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_ga4ff3b03be962d7ceba1062def0f557ef}{clear\+Figure} (const std\+::string \&figure\+Name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Clears the contents of the figure {\itshape figure\+Name}, or the current figure if argument is given. \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_gaa4bf32f16605010080edaea2437abb57}{close\+Figure} (const std\+::string \&figure\+Name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Close the figure named {\itshape figure\+Name}, or the current figure if no argument is given. \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_gab6e221be3af71ea2286aecd0f7768908}{save\+Image} (const std\+::string \&file\+Name, const std\+::string \&figure\+Name)
+\item 
+void \hyperlink{group__figure_ga026c22d6f3ab562e6ddc2859da683170}{select\+Figure} (const std\+::string \&figure\+Name)
+\begin{DoxyCompactList}\small\item\em Select {\itshape figure\+Name} as the current figure. Drawing operations will then apply to {\itshape figure\+Name}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ View settings}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__figure_ga5f783122c88718659b7e8697235e1b1a}{axis\+Auto} (const std\+::string \&figure\+Name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Set axes limits to the bounding box of the drawing. \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_ga60332429e40faee0da4e3a5a6b71b6b1}{axis\+Limits} (const double \&x\+\_\+lb, const double \&x\+\_\+ub, const double \&y\+\_\+lb, const double \&y\+\_\+ub, const std\+::string \&figure\+Name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Specify the rectangle to be displayed\+: Lower-\/left corner ({\itshape x\+\_\+lb}, {\itshape y\+\_\+lb}) and a upper-\/right corner ({\itshape x\+\_\+ub}, {\itshape y\+\_\+ub}). \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_ga1a9931de0e9f8195d66547a22f57aaa1}{axis\+Labels} (const std\+::string \&x\+\_\+label, const std\+::string \&y\+\_\+label, const std\+::string \&figure\+Name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Set x-\/axis and y-\/axis labels to respectively {\itshape x\+\_\+label} and {\itshape y\+\_\+label}. \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_gaecbcdf234c90fa4065e7650ae1e518f0}{axis\+Labels} (const std\+::vector$<$ std\+::string $>$ \&labels, const std\+::string \&figure\+Name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Set axis labels according to the list provided in {\itshape labels}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Objects grouping and deletion}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__drawing_gaf31a1d5f2b5e2b24638e8d5f98298cc9}{clear\+Group} (const std\+::string \&figure\+Name, const std\+::string \&group\+Name)
+\begin{DoxyCompactList}\small\item\em Create a new group with the specified {\itshape name}. \end{DoxyCompactList}\item 
+void \hyperlink{group__drawing_ga04b794cb10a281c580ce457a545ddf1e}{clear\+Group} (const std\+::string \&group\+Name)
+\begin{DoxyCompactList}\small\item\em Clear the contents of the group {\itshape group\+Name} in current figure. \end{DoxyCompactList}\item 
+void \hyperlink{group__drawing_ga97214bfe53545e8ba3fea1bf27433bf8}{remove\+Object} (const std\+::string \&figure\+Name, const std\+::string \&object\+Name)
+\begin{DoxyCompactList}\small\item\em Delete the named graphical object {\itshape object\+Name} from figure {\itshape figure\+Name}. \end{DoxyCompactList}\item 
+void \hyperlink{group__drawing_ga0fc887c8bab5eb1c9a3e5e315e9d44d5}{remove\+Object} (const std\+::string \&object\+Name)
+\begin{DoxyCompactList}\small\item\em Delete the named graphical object {\itshape object\+Name} from current figure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Figure properties modification}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__figure_gabef77ec6edd8558cfe1b0895ed217e4c}{set\+Figure\+Properties} (const std\+::string \&figure\+Name, const \hyperlink{classvibes_1_1_params}{Params} \&properties)
+\begin{DoxyCompactList}\small\item\em Assign the given {\itshape properties} to the figure {\itshape figure\+Name}. \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_gaac344cd02f33c886c3da7bae58f1bcb8}{set\+Figure\+Properties} (const \hyperlink{classvibes_1_1_params}{Params} \&properties)
+\begin{DoxyCompactList}\small\item\em Assign the given {\itshape properties} to the current figure. \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_ga9ca04dbb976e764ef5eb85d33f1dc9cb}{set\+Figure\+Property} (const std\+::string \&figure\+Name, const std\+::string \&key, const \hyperlink{classvibes_1_1_value}{Value} \&value)
+\begin{DoxyCompactList}\small\item\em Set the property {\itshape key} to the provided {\itshape value} for figure {\itshape figure\+Name}. \end{DoxyCompactList}\item 
+void \hyperlink{group__figure_gac7568a3fa42cfda574b570eed0c7edac}{set\+Figure\+Property} (const std\+::string \&key, const \hyperlink{classvibes_1_1_value}{Value} \&value)
+\begin{DoxyCompactList}\small\item\em Set the property {\itshape key} to the provided {\itshape value} for current figure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Object properties modification}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__drawing_ga62444280a2ae27683063e4229d966da6}{set\+Object\+Properties} (const std\+::string \&figure\+Name, const std\+::string \&object\+Name, const \hyperlink{classvibes_1_1_params}{Params} \&properties)
+\begin{DoxyCompactList}\small\item\em Assign {\itshape properties} to the named object {\itshape object\+Name} in figure {\itshape figure\+Name}. \end{DoxyCompactList}\item 
+void \hyperlink{group__drawing_ga7e66750e7e8b095c92762f8632a1f954}{set\+Object\+Properties} (const std\+::string \&object\+Name, const \hyperlink{classvibes_1_1_params}{Params} \&properties)
+\begin{DoxyCompactList}\small\item\em Assign {\itshape properties} to the named object {\itshape object\+Name} in current figure. \end{DoxyCompactList}\item 
+void \hyperlink{group__drawing_gaec9511af44b50c7f5bad3ea1dcebeb85}{set\+Object\+Property} (const std\+::string \&figure\+Name, const std\+::string \&object\+Name, const std\+::string \&key, const \hyperlink{classvibes_1_1_value}{Value} \&value)
+\begin{DoxyCompactList}\small\item\em Set the property {\itshape key} to the provided {\itshape value} for the named object {\itshape object\+Name} in figure {\itshape figure\+Name}. \end{DoxyCompactList}\item 
+void \hyperlink{group__drawing_ga8b6e96cfeb43d967950940fa388b5574}{set\+Object\+Property} (const std\+::string \&object\+Name, const std\+::string \&key, const \hyperlink{classvibes_1_1_value}{Value} \&value)
+\begin{DoxyCompactList}\small\item\em Set the property {\itshape key} to the provided {\itshape value} for the named object {\itshape object\+Name} in current figure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Primitive drawing functions}
+\label{_amgrp40669830a4f0e6a5b95068e28288c5c3}%
+Functions for drawing boxes, ellipses, lines. By default, all these functions operate on the current figure. The optional agument {\itshape format} provides quick graphics attribute setup. Additional parameters can be provided in the optional last argument {\itshape params}. \begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ double $>$ {\bfseries center}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ {\bfseries cov}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double {\bfseries cx}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double {\bfseries cy}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double {\bfseries r\+\_\+min}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double const double {\bfseries r\+\_\+max}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double const double const double {\bfseries theta\+\_\+min}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double const double const double const double theta\+\_\+max const std\+::string {\bfseries raster\+Filename}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double const double const double const double theta\+\_\+max const std\+::string const double {\bfseries ulb}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double const double const double const double theta\+\_\+max const std\+::string const double const double {\bfseries yub}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double const double const double const double theta\+\_\+max const std\+::string const double const double const double {\bfseries xres}
+\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double const double const double const double theta\+\_\+max const std\+::string const double const double const double const double {\bfseries yres}
+\item 
+\hyperlink{group__drawing_gaa1a216c77912e57296d3092253e0b2e4}{V\+I\+B\+E\+S\+\_\+\+F\+U\+N\+C\+\_\+\+C\+O\+L\+O\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+6} (draw\+Confidence\+Ellipse, const double \&, cx, const double \&, cy, const double \&, sxx, const double \&, sxy, const double \&, syy, const double \&, K) V\+I\+B\+E\+S\+\_\+\+F\+U\+N\+C\+\_\+\+C\+O\+L\+O\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+3(draw\+Confidence\+Ellipse
+\begin{DoxyCompactList}\small\item\em Draw a 2-\/D box with a left lower corner at ({\itshape x\+\_\+lb}, {\itshape y\+\_\+lb}) and a right upper corner at ({\itshape x\+\_\+ub}, {\itshape y\+\_\+ub}) \end{DoxyCompactList}\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K \hyperlink{group__drawing_gabc42f6a4ac88539dfba5ca2a06dd38bb}{V\+I\+B\+E\+S\+\_\+\+F\+U\+N\+C\+\_\+\+C\+O\+L\+O\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+6} (draw\+Sector, const double \&, cx, const double \&, cy, const double \&, a, const double \&, b, const double \&, start\+Angle, const double \&, end\+Angle) V\+I\+B\+E\+S\+\_\+\+F\+U\+N\+C\+\_\+\+C\+O\+L\+O\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+6(draw\+Pie
+\begin{DoxyCompactList}\small\item\em Draw a circle centered at ({\itshape cx}, {\itshape cy}), with radius {\itshape r}. \end{DoxyCompactList}\item 
+const std\+::vector$<$ double $>$ const std\+::vector$<$ double $>$ const double K const double const double const double const double const double const double theta\+\_\+max \hyperlink{group__drawing_ga60266299e74aa49b8633e013deaab601}{V\+I\+B\+E\+S\+\_\+\+F\+U\+N\+C\+\_\+\+C\+O\+L\+O\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+4} (draw\+Ring, const double \&, cx, const double \&, cy, const double \&, r\+\_\+min, const double \&, r\+\_\+max) V\+I\+B\+E\+S\+\_\+\+F\+U\+N\+C\+\_\+\+C\+O\+L\+O\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+5(draw\+Raster
+\begin{DoxyCompactList}\small\item\em Draw a Point at position (cy, cy) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

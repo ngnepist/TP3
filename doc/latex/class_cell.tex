@@ -1,0 +1,87 @@
+\hypertarget{class_cell}{}\section{Cell Class Reference}
+\label{class_cell}\index{Cell@{Cell}}
+
+
+Collaboration diagram for Cell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_cell__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cell_aa39ad04eeebb7bf00d592ad36640337e}{Cell} (int x, int y)
+\item 
+\hyperlink{class_cell_a9fa559f7a28e2b4336c6879ca09304d8}{$\sim$\+Cell} ()
+\item 
+void \hyperlink{class_cell_af74ee3d2e1d987c54f00f0edace4f5ab}{add\+\_\+neighb} (\hyperlink{class_cell}{Cell} $\ast$n1)
+\item 
+void \hyperlink{class_cell_a81f2432f9fbe040ba4f778726f72f50c}{add\+\_\+neighb} (\hyperlink{class_cell}{Cell} $\ast$n1, \hyperlink{class_cell}{Cell} $\ast$n2)
+\item 
+void \hyperlink{class_cell_a60802074b978ca9e07e0b66c6470fccd}{add\+\_\+neighb} (\hyperlink{class_cell}{Cell} $\ast$n1, \hyperlink{class_cell}{Cell} $\ast$n2, \hyperlink{class_cell}{Cell} $\ast$n3)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cell_aad0edd318cb8deb1a7375ccd2c50eff2}\label{class_cell_aad0edd318cb8deb1a7375ccd2c50eff2}} 
+const int {\bfseries m\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_cell_ad8bd81fcd1915ea1ebecb00d36df8ff0}\label{class_cell_ad8bd81fcd1915ea1ebecb00d36df8ff0}} 
+const int {\bfseries m\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_cell_a746815d55334d4b4c607c10866ff2586}\label{class_cell_a746815d55334d4b4c607c10866ff2586}} 
+int {\bfseries m\+\_\+nb\+\_\+neighb} = 0
+\item 
+\mbox{\Hypertarget{class_cell_a5b827178447902d04580afe9ecc23df4}\label{class_cell_a5b827178447902d04580afe9ecc23df4}} 
+\hyperlink{class_cell}{Cell} $\ast$$\ast$ {\bfseries m\+\_\+neighb} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{class_cell_a12d1879e5259aa9e1406e07052f9bc00}\label{class_cell_a12d1879e5259aa9e1406e07052f9bc00}} 
+bool {\bfseries m\+\_\+displayed} = false
+\item 
+\mbox{\Hypertarget{class_cell_a5d45f742b4819199b494da7b1417d120}\label{class_cell_a5d45f742b4819199b494da7b1417d120}} 
+bool {\bfseries m\+\_\+flag} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cell_aa39ad04eeebb7bf00d592ad36640337e}\label{class_cell_aa39ad04eeebb7bf00d592ad36640337e}} 
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\subsubsection{\texorpdfstring{Cell()}{Cell()}}
+{\footnotesize\ttfamily Cell\+::\+Cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\textbackslash{} Methode permettant la construction d\textquotesingle{}une cellule \textbackslash{} param x est la premiere coordonnee de la cellule \textbackslash{} param y est la deuxieme coordonnee de la cellule\mbox{\Hypertarget{class_cell_a9fa559f7a28e2b4336c6879ca09304d8}\label{class_cell_a9fa559f7a28e2b4336c6879ca09304d8}} 
+\index{Cell@{Cell}!````~Cell@{$\sim$\+Cell}}
+\index{````~Cell@{$\sim$\+Cell}!Cell@{Cell}}
+\subsubsection{\texorpdfstring{$\sim$\+Cell()}{~Cell()}}
+{\footnotesize\ttfamily Cell\+::$\sim$\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\textbackslash{} c\textquotesingle{}est le destructeur
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cell_af74ee3d2e1d987c54f00f0edace4f5ab}\label{class_cell_af74ee3d2e1d987c54f00f0edace4f5ab}} 
+\index{Cell@{Cell}!add\+\_\+neighb@{add\+\_\+neighb}}
+\index{add\+\_\+neighb@{add\+\_\+neighb}!Cell@{Cell}}
+\subsubsection{\texorpdfstring{add\+\_\+neighb()}{add\_neighb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Cell\+::add\+\_\+neighb (\begin{DoxyParamCaption}\item[{\hyperlink{class_cell}{Cell} $\ast$}]{n1 }\end{DoxyParamCaption})}
+
+\textbackslash{} Methode permettant l\textquotesingle{}ajout d\textquotesingle{}une cellule comme voisin de celle active \textbackslash{} param n1 est le pointeur vers la cellule a ajouter comme voisine\mbox{\Hypertarget{class_cell_a81f2432f9fbe040ba4f778726f72f50c}\label{class_cell_a81f2432f9fbe040ba4f778726f72f50c}} 
+\index{Cell@{Cell}!add\+\_\+neighb@{add\+\_\+neighb}}
+\index{add\+\_\+neighb@{add\+\_\+neighb}!Cell@{Cell}}
+\subsubsection{\texorpdfstring{add\+\_\+neighb()}{add\_neighb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Cell\+::add\+\_\+neighb (\begin{DoxyParamCaption}\item[{\hyperlink{class_cell}{Cell} $\ast$}]{n1,  }\item[{\hyperlink{class_cell}{Cell} $\ast$}]{n2 }\end{DoxyParamCaption})}
+
+\textbackslash{} Methode permettant l\textquotesingle{}ajout de 2 cellules comme voisines de celle active \textbackslash{} param n1 est le pointeur vers la cellule a ajouter comme voisine \textbackslash{} param n2 est le pointeur vers la deuxieme cellule a ajouter comme voisine\mbox{\Hypertarget{class_cell_a60802074b978ca9e07e0b66c6470fccd}\label{class_cell_a60802074b978ca9e07e0b66c6470fccd}} 
+\index{Cell@{Cell}!add\+\_\+neighb@{add\+\_\+neighb}}
+\index{add\+\_\+neighb@{add\+\_\+neighb}!Cell@{Cell}}
+\subsubsection{\texorpdfstring{add\+\_\+neighb()}{add\_neighb()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Cell\+::add\+\_\+neighb (\begin{DoxyParamCaption}\item[{\hyperlink{class_cell}{Cell} $\ast$}]{n1,  }\item[{\hyperlink{class_cell}{Cell} $\ast$}]{n2,  }\item[{\hyperlink{class_cell}{Cell} $\ast$}]{n3 }\end{DoxyParamCaption})}
+
+\textbackslash{} Methode permettant l\textquotesingle{}ajout de 2 cellules comme voisines de celle active \textbackslash{} param n1 est le pointeur vers la cellule a ajouter comme voisine \textbackslash{} param n2 est le pointeur vers la deuxieme cellule a ajouter comme voisine \textbackslash{} param n3 est le pointeur vers la troisieme cellule a ajouter comme voisine
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Cell.\+h\item 
+src/Cell.\+cpp\end{DoxyCompactItemize}

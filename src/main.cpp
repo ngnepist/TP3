@@ -5,13 +5,25 @@
 
 using namespace std;
 
+/**
+*\ The main fonction 
+*/
+
 struct Maze
 {
+  /**
+  *\Structure d'un Labyrinthe, un pointeur sur la case de depart et un pointeur sur la case d'arrivee 
+  */
   Cell *c0, *cf;
 };
 
 void draw_gate(const Cell *n1, const Cell *n2)
 {
+  /**
+  *\ Methode permettant le tracer le passage entre 2 cellules
+  *\ param n1 est un pointeur vers la cellule de depart de la separation
+  *\ param n2 est un pointeur vers la cellule d'arrivee de la separation 
+  */
   vibes::drawBox(min(n1->m_x, n2->m_x) + 0.1, max(n1->m_x, n2->m_x) + 0.9,
                  min(n1->m_y, n2->m_y) + 0.1, max(n1->m_y, n2->m_y) + 0.9,
                  "lightGray[lightGray]");
@@ -19,6 +31,11 @@ void draw_gate(const Cell *n1, const Cell *n2)
 
 void display_cell(Cell *cell)
 {
+  /**
+  *\ Methode permettant le tracer d'une cellule
+  *\ param cell est un pointeur vers la cellule 
+  */
+
   vibes::drawBox(cell->m_x, cell->m_x + 1, cell->m_y, cell->m_y + 1, "[lightGray]");
   cell->m_displayed = true;
 
@@ -32,6 +49,10 @@ void display_cell(Cell *cell)
 
 void display(Maze maze)
 {
+  /**
+  *\ Methode permettant le tracer de tout le Labyrinthe
+  *\ param maze est la variable contenant les informations sur le labyrinthe
+  */
   display_cell(maze.c0);
   vibes::drawCircle(maze.c0->m_x + 0.5, maze.c0->m_y + 0.5, 0.3, "#00AC07[#00AC07]");
   vibes::drawCircle(maze.cf->m_x + 0.5, maze.cf->m_y + 0.5, 0.3, "#F39F00[#F39F00]");
@@ -39,6 +60,10 @@ void display(Maze maze)
 
 void display_path(Path *path)
 {
+  /**
+  *\ Methode permettant le tracer du chemin resolvant le Labyrinthe
+  *\ param n1 est un pointeur vers le chemin 
+  */
   if(path->m_next != NULL)
   {
     vibes::drawBox(min(path->m_c->m_x, path->m_next->m_c->m_x) + 0.45, max(path->m_c->m_x, path->m_next->m_c->m_x) + 0.55,
@@ -50,6 +75,11 @@ void display_path(Path *path)
 
 bool find_path(Cell *c, Cell *cf, Path *path)
 {
+  /**
+  *\ Methode permettant la recherche du chemin solution du Labyrinthe
+  *\ param c est un pointeur vers la cellule de depart du Labyrinthe
+  *\ param n2 est un pointeur vers la cellule d'arrivee du Labyrinthe
+  */
   c->m_flag = true;
 
   if(c == cf)
@@ -72,6 +102,9 @@ bool find_path(Cell *c, Cell *cf, Path *path)
 
 Maze create_8x8_maze()
 {
+  /**
+  *\ Methode permettant de creer un lAbyrinthe 8*8
+  */
   Cell* a[8][8];
   for(int i = 0 ; i < 8 ; i++)
   {
@@ -126,6 +159,9 @@ Maze create_8x8_maze()
 
 Maze create_4x4_maze()
 {
+  /**
+  *\ Methode permettant de creer un lAbyrinthe 4*4
+  */
   Cell *cA = new Cell(0, 0);
   Cell *cB = new Cell(0, 1);
   Cell *cC = new Cell(0, 2);
@@ -159,6 +195,9 @@ Maze create_4x4_maze()
 
 int main()
 {
+  /**
+  *\ Methode principale, le main
+  */
   Maze maze = create_8x8_maze();
   Path *path = new Path(maze.cf);
 

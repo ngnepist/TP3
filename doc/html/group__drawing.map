@@ -1,0 +1,5 @@
+<map id="Drawing and editing functions" name="Drawing and editing functions">
+<area shape="rect" id="node1" href="$group__figure.html" title="VIBes drawings are performed on figures. These functions provide a way to create, save and manipulate..." alt="" coords="223,5,416,32"/>
+<area shape="rect" id="node2" href="$group__params.html" title="VIBes properties key\l&#45;value classes" alt="" coords="247,57,391,98"/>
+<area shape="rect" id="node4" href="$group__connection.html" title="Functions for establishing connection with the VIBes viewer application. " alt="" coords="252,122,387,163"/>
+</map>
