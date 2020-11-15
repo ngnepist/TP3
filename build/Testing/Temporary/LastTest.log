@@ -1,0 +1,19 @@
+Start testing: Nov 10 00:10 CET
+----------------------------------------------------------
+Unable to find executable: ./tests/test_Laby.cpp
+1/1 Testing: TestName
+1/1 Test: TestName
+Command: ""
+Directory: /home/ngenpiepaye/Mon evolution/ENSTA/FISE2A/C++/TP3/build
+"TestName" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestName" end time: Nov 10 00:10 CET
+"TestName" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 10 00:10 CET

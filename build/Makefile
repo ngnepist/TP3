@@ -67,6 +67,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -122,6 +133,19 @@ main_exe: cmake_check_build_system
 main_exe/fast:
 	$(MAKE) -f CMakeFiles/main_exe.dir/build.make CMakeFiles/main_exe.dir/build
 .PHONY : main_exe/fast
+
+#=============================================================================
+# Target rules for targets named test_exe
+
+# Build rule for target.
+test_exe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_exe
+.PHONY : test_exe
+
+# fast build rule for target.
+test_exe/fast:
+	$(MAKE) -f CMakeFiles/test_exe.dir/build.make CMakeFiles/test_exe.dir/build
+.PHONY : test_exe/fast
 
 src/Cell.o: src/Cell.cpp.o
 
@@ -231,6 +255,33 @@ src/vibes.cpp.s:
 	$(MAKE) -f CMakeFiles/main_exe.dir/build.make CMakeFiles/main_exe.dir/src/vibes.cpp.s
 .PHONY : src/vibes.cpp.s
 
+tests/test_Laby.o: tests/test_Laby.cpp.o
+
+.PHONY : tests/test_Laby.o
+
+# target to build an object file
+tests/test_Laby.cpp.o:
+	$(MAKE) -f CMakeFiles/test_exe.dir/build.make CMakeFiles/test_exe.dir/tests/test_Laby.cpp.o
+.PHONY : tests/test_Laby.cpp.o
+
+tests/test_Laby.i: tests/test_Laby.cpp.i
+
+.PHONY : tests/test_Laby.i
+
+# target to preprocess a source file
+tests/test_Laby.cpp.i:
+	$(MAKE) -f CMakeFiles/test_exe.dir/build.make CMakeFiles/test_exe.dir/tests/test_Laby.cpp.i
+.PHONY : tests/test_Laby.cpp.i
+
+tests/test_Laby.s: tests/test_Laby.cpp.s
+
+.PHONY : tests/test_Laby.s
+
+# target to generate assembly for a file
+tests/test_Laby.cpp.s:
+	$(MAKE) -f CMakeFiles/test_exe.dir/build.make CMakeFiles/test_exe.dir/tests/test_Laby.cpp.s
+.PHONY : tests/test_Laby.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,8 +289,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... main_exe"
+	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... main_exe"
+	@echo "... test_exe"
 	@echo "... src/Cell.o"
 	@echo "... src/Cell.i"
 	@echo "... src/Cell.s"
@@ -252,6 +305,9 @@ help:
 	@echo "... src/vibes.o"
 	@echo "... src/vibes.i"
 	@echo "... src/vibes.s"
+	@echo "... tests/test_Laby.o"
+	@echo "... tests/test_Laby.i"
+	@echo "... tests/test_Laby.s"
 .PHONY : help
 
 

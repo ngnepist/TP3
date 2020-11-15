@@ -14,3 +14,14 @@ add_executable( # création de l’exécutable binaire du projet
 	main_exe # nom du binaire
 	${source_files} # liste des fichiers compilés pour le linking
 )
+file( 
+	GLOB_RECURSE # recherche récursive
+	testing_files # fichiers listés dans une variable source_files
+	tests/*.cpp	
+)
+add_executable(
+	test_exe
+	${testing_files}
+)
+enable_testing()
+add_test(NAME TestName COMMAND $<TARGET_FILE:${test_exe}>)
